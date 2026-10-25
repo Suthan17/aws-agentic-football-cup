@@ -1,0 +1,15 @@
+{
+  "llmAsAJudge": {
+    "instructions": "You are a football tactics judge. Given the game state the agent received and the single command it returned, rate whether the command was a sound tactical decision for that player's role (goalkeeper, defender, midfielder or forward): did it shoot only when close to goal with the ball, pass to a better-placed teammate, press when the opponent had the ball nearby, and keep its position otherwise? Context: {context} Agent output: {assistant_turn}",
+    "ratingScale": {
+      "numerical": [
+        {"value": 0.0, "label": "Poor", "definition": "The command was invalid, impossible (e.g. shooting without the ball) or clearly harmful for the team."},
+        {"value": 0.5, "label": "Acceptable", "definition": "The command was legal and reasonable but a clearly better option was available."},
+        {"value": 1.0, "label": "Good", "definition": "The command was the right tactical choice for the role and situation."}
+      ]
+    },
+    "modelConfig": {
+      "bedrockEvaluatorModelConfig": {"modelId": "us.amazon.nova-micro-v1:0"}
+    }
+  }
+}

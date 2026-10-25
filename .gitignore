@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+**/agentcore/.cli/
+**/agentcore/.cache/
+**/agentcore/cdk/node_modules/
+**/agentcore/cdk/cdk.out/
+ai-*/ai-*/lib/
+*.log
+*.jsonl
+.env*
